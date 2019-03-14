@@ -2,7 +2,7 @@
 
 namespace Elasticsearch\Tests\Serializers;
 
-use Elasticsearch\Serializers\ArrayToJSONSerializer;
+use Enalquiler\Elasticsearch\Serializers\ArrayToJSONSerializer;
 use PHPUnit_Framework_TestCase;
 use Mockery as m;
 

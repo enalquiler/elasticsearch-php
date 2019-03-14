@@ -1,9 +1,9 @@
 <?php
 
-namespace Elasticsearch\Endpoints\Cluster;
+namespace Enalquiler\Elasticsearch\Endpoints\Cluster;
 
-use Elasticsearch\Common\Exceptions;
-use Elasticsearch\Endpoints\AbstractEndpoint;
+use Enalquiler\Elasticsearch\Common\Exceptions;
+use Enalquiler\Elasticsearch\Endpoints\AbstractEndpoint;
 
 /**
  * Class Reroute
@@ -19,7 +19,7 @@ class Reroute extends AbstractEndpoint
     /**
      * @param array $body
      *
-     * @throws \Elasticsearch\Common\Exceptions\InvalidArgumentException
+     * @throws \Enalquiler\Elasticsearch\\Common\Exceptions\InvalidArgumentException
      * @return $this
      */
     public function setBody($body)

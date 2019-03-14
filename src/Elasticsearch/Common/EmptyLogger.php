@@ -1,6 +1,6 @@
 <?php
 
-namespace Elasticsearch\Common;
+namespace Enalquiler\Elasticsearch\Common;
 
 use Psr\Log\AbstractLogger;
 use Psr\Log\LoggerInterface;

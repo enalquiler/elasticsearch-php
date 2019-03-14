@@ -1,9 +1,9 @@
 <?php
 
-namespace Elasticsearch\Endpoints;
+namespace Enalquiler\Elasticsearch\Endpoints;
 
-use Elasticsearch\Serializers\SerializerInterface;
-use Elasticsearch\Transport;
+use Enalquiler\Elasticsearch\Serializers\SerializerInterface;
+use Enalquiler\Elasticsearch\Transport;
 
 /**
  * Interface BulkEndpointInterface

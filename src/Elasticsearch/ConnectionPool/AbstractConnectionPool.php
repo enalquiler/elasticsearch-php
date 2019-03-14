@@ -1,12 +1,12 @@
 <?php
 
-namespace Elasticsearch\ConnectionPool;
+namespace Enalquiler\Elasticsearch\ConnectionPool;
 
-use Elasticsearch\Common\Exceptions\InvalidArgumentException;
-use Elasticsearch\ConnectionPool\Selectors\SelectorInterface;
-use Elasticsearch\Connections\Connection;
-use Elasticsearch\Connections\ConnectionFactoryInterface;
-use Elasticsearch\Connections\ConnectionInterface;
+use Enalquiler\Elasticsearch\Common\Exceptions\InvalidArgumentException;
+use Enalquiler\Elasticsearch\ConnectionPool\Selectors\SelectorInterface;
+use Enalquiler\Elasticsearch\Connections\Connection;
+use Enalquiler\Elasticsearch\Connections\ConnectionFactoryInterface;
+use Enalquiler\Elasticsearch\Connections\ConnectionInterface;
 
 /**
  * Class AbstractConnectionPool
@@ -43,7 +43,7 @@ abstract class AbstractConnectionPool implements ConnectionPoolInterface
     /** @var array */
     protected $connectionPoolParams;
 
-    /** @var \Elasticsearch\Connections\ConnectionFactory  */
+    /** @var \Enalquiler\Elasticsearch\\Connections\ConnectionFactory  */
     protected $connectionFactory;
 
     /**

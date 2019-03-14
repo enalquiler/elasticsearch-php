@@ -5,10 +5,10 @@
  * Time: 14:34:49 pm
  */
 
-namespace Elasticsearch\Endpoints\Indices\Upgrade;
+namespace Enalquiler\Elasticsearch\Endpoints\Indices\Upgrade;
 
-use Elasticsearch\Common\Exceptions;
-use Elasticsearch\Endpoints\AbstractEndpoint;
+use Enalquiler\Elasticsearch\Common\Exceptions;
+use Enalquiler\Elasticsearch\Endpoints\AbstractEndpoint;
 
 /**
  * Class Post

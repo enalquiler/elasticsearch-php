@@ -1,9 +1,9 @@
 <?php
 
-namespace Elasticsearch\Endpoints\Template;
+namespace Enalquiler\Elasticsearch\Endpoints\Template;
 
-use Elasticsearch\Common\Exceptions;
-use Elasticsearch\Endpoints\AbstractEndpoint;
+use Enalquiler\Elasticsearch\Common\Exceptions;
+use Enalquiler\Elasticsearch\Endpoints\AbstractEndpoint;
 
 /**
  * Class Delete
@@ -17,7 +17,7 @@ use Elasticsearch\Endpoints\AbstractEndpoint;
 class Delete extends AbstractEndpoint
 {
     /**
-     * @throws \Elasticsearch\Common\Exceptions\RuntimeException
+     * @throws \Enalquiler\Elasticsearch\\Common\Exceptions\RuntimeException
      * @return string
      */
     protected function getURI()

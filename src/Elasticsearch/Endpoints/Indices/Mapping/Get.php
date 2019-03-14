@@ -1,8 +1,8 @@
 <?php
 
-namespace Elasticsearch\Endpoints\Indices\Mapping;
+namespace Enalquiler\Elasticsearch\Endpoints\Indices\Mapping;
 
-use Elasticsearch\Endpoints\AbstractEndpoint;
+use Enalquiler\Elasticsearch\Endpoints\AbstractEndpoint;
 
 /**
  * Class Get

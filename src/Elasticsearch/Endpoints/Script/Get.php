@@ -1,9 +1,9 @@
 <?php
 
-namespace Elasticsearch\Endpoints\Script;
+namespace Enalquiler\Elasticsearch\Endpoints\Script;
 
-use Elasticsearch\Common\Exceptions;
-use Elasticsearch\Endpoints\AbstractEndpoint;
+use Enalquiler\Elasticsearch\Common\Exceptions;
+use Enalquiler\Elasticsearch\Endpoints\AbstractEndpoint;
 
 /**
  * Class Get
@@ -36,7 +36,7 @@ class Get extends AbstractEndpoint
     }
 
     /**
-     * @throws \Elasticsearch\Common\Exceptions\RuntimeException
+     * @throws \Enalquiler\Elasticsearch\\Common\Exceptions\RuntimeException
      * @return string
      */
     protected function getURI()

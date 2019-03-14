@@ -1,8 +1,8 @@
 <?php
 
-namespace Elasticsearch\Endpoints;
+namespace Enalquiler\Elasticsearch\Endpoints;
 
-use Elasticsearch\Common\Exceptions;
+use Enalquiler\Elasticsearch\Common\Exceptions;
 
 /**
  * Class Exists
@@ -16,7 +16,7 @@ use Elasticsearch\Common\Exceptions;
 class Exists extends AbstractEndpoint
 {
     /**
-     * @throws \Elasticsearch\Common\Exceptions\RuntimeException
+     * @throws \Enalquiler\Elasticsearch\\Common\Exceptions\RuntimeException
      * @return string
      */
     protected function getURI()

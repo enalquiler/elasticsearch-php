@@ -1,8 +1,8 @@
 <?php
 
-namespace Elasticsearch\ConnectionPool\Selectors;
+namespace Enalquiler\Elasticsearch\ConnectionPool\Selectors;
 
-use Elasticsearch\Connections\ConnectionInterface;
+use Enalquiler\Elasticsearch\Connections\ConnectionInterface;
 
 /**
  * Class RoundRobinSelector
@@ -25,7 +25,7 @@ class RoundRobinSelector implements SelectorInterface
      *
      * @param  ConnectionInterface[] $connections an array of ConnectionInterface instances to choose from
      *
-     * @return \Elasticsearch\Connections\ConnectionInterface
+     * @return \Enalquiler\Elasticsearch\\Connections\ConnectionInterface
      */
     public function select($connections)
     {

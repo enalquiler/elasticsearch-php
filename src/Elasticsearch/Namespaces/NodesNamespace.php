@@ -1,6 +1,6 @@
 <?php
 
-namespace Elasticsearch\Namespaces;
+namespace Enalquiler\Elasticsearch\Namespaces;
 
 /**
  * Class NodesNamespace
@@ -49,7 +49,7 @@ class NodesNamespace extends AbstractNamespace
         /** @var callback $endpointBuilder */
         $endpointBuilder = $this->endpoints;
 
-        /** @var \Elasticsearch\Endpoints\Nodes\Stats $endpoint */
+        /** @var \Enalquiler\Elasticsearch\\Endpoints\Nodes\Stats $endpoint */
         $endpoint = $endpointBuilder('Nodes\Stats');
         $endpoint->setNodeID($nodeID)
                  ->setMetric($metric)
@@ -83,7 +83,7 @@ class NodesNamespace extends AbstractNamespace
         /** @var callback $endpointBuilder */
         $endpointBuilder = $this->endpoints;
 
-        /** @var \Elasticsearch\Endpoints\Nodes\Info $endpoint */
+        /** @var \Enalquiler\Elasticsearch\\Endpoints\Nodes\Info $endpoint */
         $endpoint = $endpointBuilder('Nodes\Info');
         $endpoint->setNodeID($nodeID)->setMetric($metric);
         $endpoint->setParams($params);
@@ -115,7 +115,7 @@ class NodesNamespace extends AbstractNamespace
         /** @var callback $endpointBuilder */
         $endpointBuilder = $this->endpoints;
 
-        /** @var \Elasticsearch\Endpoints\Nodes\HotThreads $endpoint */
+        /** @var \Enalquiler\Elasticsearch\\Endpoints\Nodes\HotThreads $endpoint */
         $endpoint = $endpointBuilder('Nodes\HotThreads');
         $endpoint->setNodeID($nodeID);
         $endpoint->setParams($params);
@@ -143,7 +143,7 @@ class NodesNamespace extends AbstractNamespace
         /** @var callback $endpointBuilder */
         $endpointBuilder = $this->endpoints;
 
-        /** @var \Elasticsearch\Endpoints\Nodes\Shutdown $endpoint */
+        /** @var \Enalquiler\Elasticsearch\\Endpoints\Nodes\Shutdown $endpoint */
         $endpoint = $endpointBuilder('Nodes\Shutdown');
         $endpoint->setNodeID($nodeID);
         $endpoint->setParams($params);

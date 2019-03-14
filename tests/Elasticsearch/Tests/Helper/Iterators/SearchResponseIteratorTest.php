@@ -2,7 +2,7 @@
 
 namespace Elasticsearch\Tests\Helper\Iterators;
 
-use Elasticsearch\Helper\Iterators\SearchResponseIterator;
+use Enalquiler\Elasticsearch\Helper\Iterators\SearchResponseIterator;
 use Mockery as m;
 
 /**
@@ -33,7 +33,7 @@ class SearchResponseIteratorTest extends \PHPUnit_Framework_TestCase
             )
         );
 
-        $mock_client = m::mock('\Elasticsearch\Client');
+        $mock_client = m::mock('\Enalquiler\Elasticsearch\Client');
 
         $mock_client->shouldReceive('search')
             ->once()
@@ -97,7 +97,7 @@ class SearchResponseIteratorTest extends \PHPUnit_Framework_TestCase
             )
         );
 
-        $mock_client = m::mock('\Elasticsearch\Client');
+        $mock_client = m::mock('\Enalquiler\Elasticsearch\Client');
 
         $mock_client->shouldReceive('search')
             ->once()

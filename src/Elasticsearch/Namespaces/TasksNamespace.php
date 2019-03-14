@@ -1,6 +1,6 @@
 <?php
 
-namespace Elasticsearch\Namespaces;
+namespace Enalquiler\Elasticsearch\Namespaces;
 
 /**
  * Class TasksNamespace
@@ -35,7 +35,7 @@ class TasksNamespace extends AbstractNamespace
         /** @var callback $endpointBuilder */
         $endpointBuilder = $this->endpoints;
 
-        /** @var \Elasticsearch\Endpoints\Tasks\Cancel $endpoint */
+        /** @var \Enalquiler\Elasticsearch\\Endpoints\Tasks\Cancel $endpoint */
         $endpoint = $endpointBuilder('Tasks\Cancel');
         $endpoint->setTaskId($taskID);
         $endpoint->setParams($params);
@@ -69,7 +69,7 @@ class TasksNamespace extends AbstractNamespace
         /** @var callback $endpointBuilder */
         $endpointBuilder = $this->endpoints;
 
-        /** @var \Elasticsearch\Endpoints\Tasks\Get $endpoint */
+        /** @var \Enalquiler\Elasticsearch\\Endpoints\Tasks\Get $endpoint */
         $endpoint = $endpointBuilder('Tasks\Get');
         $endpoint->setTaskId($taskID);
         $endpoint->setParams($params);
@@ -102,7 +102,7 @@ class TasksNamespace extends AbstractNamespace
         /** @var callback $endpointBuilder */
         $endpointBuilder = $this->endpoints;
 
-        /** @var \Elasticsearch\Endpoints\Tasks\Get $endpoint */
+        /** @var \Enalquiler\Elasticsearch\\Endpoints\Tasks\Get $endpoint */
         $endpoint = $endpointBuilder('Tasks\Get');
         $endpoint->setTaskId($taskID);
         $endpoint->setParams($params);

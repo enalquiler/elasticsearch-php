@@ -1,9 +1,9 @@
 <?php
 
-namespace Elasticsearch\Common\Exceptions\Curl;
+namespace Enalquiler\Elasticsearch\Common\Exceptions\Curl;
 
-use Elasticsearch\Common\Exceptions\ElasticsearchException;
-use Elasticsearch\Common\Exceptions\TransportException;
+use Enalquiler\Elasticsearch\Common\Exceptions\ElasticsearchException;
+use Enalquiler\Elasticsearch\Common\Exceptions\TransportException;
 
 /**
  * Class OperationTimeoutException

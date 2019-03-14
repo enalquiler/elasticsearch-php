@@ -1,8 +1,8 @@
 <?php
 
-namespace Elasticsearch\Endpoints;
+namespace Enalquiler\Elasticsearch\Endpoints;
 
-use Elasticsearch\Common\Exceptions;
+use Enalquiler\Elasticsearch\Common\Exceptions;
 
 /**
  * Class Search
@@ -18,7 +18,7 @@ class Search extends AbstractEndpoint
     /**
      * @param array $body
      *
-     * @throws \Elasticsearch\Common\Exceptions\InvalidArgumentException
+     * @throws \Enalquiler\Elasticsearch\\Common\Exceptions\InvalidArgumentException
      * @return $this
      */
     public function setBody($body)

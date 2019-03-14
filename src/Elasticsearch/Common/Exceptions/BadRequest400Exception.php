@@ -1,6 +1,6 @@
 <?php
 
-namespace Elasticsearch\Common\Exceptions;
+namespace Enalquiler\Elasticsearch\Common\Exceptions;
 
 /**
  * BadRequest400Exception, thrown on 400 conflict http error

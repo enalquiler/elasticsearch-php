@@ -1,8 +1,8 @@
 <?php
 
-namespace Elasticsearch\Helper\Iterators;
+namespace Enalquiler\Elasticsearch\Helper\Iterators;
 
-use ElasticSearch\Client;
+use Enalquiler\Elasticsearch\Client;
 use Iterator;
 
 /**

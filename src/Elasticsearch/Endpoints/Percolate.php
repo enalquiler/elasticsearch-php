@@ -1,8 +1,8 @@
 <?php
 
-namespace Elasticsearch\Endpoints;
+namespace Enalquiler\Elasticsearch\Endpoints;
 
-use Elasticsearch\Common\Exceptions;
+use Enalquiler\Elasticsearch\Common\Exceptions;
 
 /**
  * Class Percolate
@@ -18,7 +18,7 @@ class Percolate extends AbstractEndpoint
     /**
      * @param array $body
      *
-     * @throws \Elasticsearch\Common\Exceptions\InvalidArgumentException
+     * @throws \Enalquiler\Elasticsearch\\Common\Exceptions\InvalidArgumentException
      * @return $this
      */
     public function setBody($body)
@@ -33,7 +33,7 @@ class Percolate extends AbstractEndpoint
     }
 
     /**
-     * @throws \Elasticsearch\Common\Exceptions\RuntimeException
+     * @throws \Enalquiler\Elasticsearch\\Common\Exceptions\RuntimeException
      * @return string
      */
     protected function getURI()
@@ -83,7 +83,7 @@ class Percolate extends AbstractEndpoint
 
     /**
      * @return array
-     * @throws \Elasticsearch\Common\Exceptions\RuntimeException
+     * @throws \Enalquiler\Elasticsearch\\Common\Exceptions\RuntimeException
      */
     protected function getBody()
     {

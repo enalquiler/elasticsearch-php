@@ -1,6 +1,6 @@
 <?php
 
-namespace Elasticsearch\Helper\Iterators;
+namespace Enalquiler\Elasticsearch\Helper\Iterators;
 
 use Iterator;
 

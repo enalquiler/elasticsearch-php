@@ -1,6 +1,6 @@
 <?php
 
-namespace Elasticsearch\Serializers;
+namespace Enalquiler\Elasticsearch\Serializers;
 
 /**
  * Class JSONSerializer

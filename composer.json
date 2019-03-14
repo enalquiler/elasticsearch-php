@@ -1,5 +1,5 @@
 {
-  "name": "elasticsearch/elasticsearch",
+  "name": "enalquiler/elasticsearch",
   "description": "PHP Client for Elasticsearch",
   "keywords": ["search","client", "elasticsearch"],
   "type": "library",
@@ -20,7 +20,8 @@
     "symfony/yaml": "2.4.3 as 2.4.2",
     "twig/twig": "1.*",
     "cpliakas/git-wrapper": "~1.0",
-    "sami/sami": "~3.2"
+    "sami/sami": "~3.2",
+    "codegyre/robo": "*"
   },
   "suggest": {
     "ext-curl": "*",
@@ -28,7 +29,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Elasticsearch\\": "src/Elasticsearch/"
+      "Enalquiler\\Elasticsearch\\": "src/Elasticsearch/"
     }
   },
   "autoload-dev": {

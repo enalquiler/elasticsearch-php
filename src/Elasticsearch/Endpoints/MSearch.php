@@ -1,10 +1,10 @@
 <?php
 
-namespace Elasticsearch\Endpoints;
+namespace Enalquiler\Elasticsearch\Endpoints;
 
-use Elasticsearch\Common\Exceptions;
-use Elasticsearch\Serializers\SerializerInterface;
-use Elasticsearch\Transport;
+use Enalquiler\Elasticsearch\Common\Exceptions;
+use Enalquiler\Elasticsearch\Serializers\SerializerInterface;
+use Enalquiler\Elasticsearch\Transport;
 
 /**
  * Class MSearch
@@ -35,7 +35,7 @@ class MSearch extends AbstractEndpoint
     /**
      * @param array|string $body
      *
-     * @throws \Elasticsearch\Common\Exceptions\InvalidArgumentException
+     * @throws \Enalquiler\Elasticsearch\\Common\Exceptions\InvalidArgumentException
      * @return $this
      */
     public function setBody($body)
@@ -89,7 +89,7 @@ class MSearch extends AbstractEndpoint
 
     /**
      * @return array
-     * @throws \Elasticsearch\Common\Exceptions\RuntimeException
+     * @throws \Enalquiler\Elasticsearch\\Common\Exceptions\RuntimeException
      */
     protected function getBody()
     {

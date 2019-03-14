@@ -1,8 +1,8 @@
 <?php
 
-namespace Elasticsearch\ConnectionPool;
+namespace Enalquiler\Elasticsearch\ConnectionPool;
 
-use Elasticsearch\Connections\ConnectionInterface;
+use Enalquiler\Elasticsearch\Connections\ConnectionInterface;
 
 /**
  * ConnectionPoolInterface

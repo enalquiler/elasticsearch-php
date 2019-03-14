@@ -1,6 +1,6 @@
 <?php
 
-namespace Elasticsearch\ConnectionPool\Selectors;
+namespace Enalquiler\Elasticsearch\ConnectionPool\Selectors;
 
 /**
  * Class RandomSelector
@@ -18,7 +18,7 @@ interface SelectorInterface
      *
      * @param  ConnectionInterface[] $connections an array of ConnectionInterface instances to choose from
      *
-     * @return \Elasticsearch\Connections\ConnectionInterface
+     * @return \Enalquiler\Elasticsearch\\Connections\ConnectionInterface
      */
     public function select($connections);
 }

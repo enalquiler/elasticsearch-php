@@ -1,8 +1,8 @@
 <?php
 
-namespace Elasticsearch\ConnectionPool\Selectors;
+namespace Enalquiler\Elasticsearch\ConnectionPool\Selectors;
 
-use Elasticsearch\Connections\ConnectionInterface;
+use Enalquiler\Elasticsearch\Connections\ConnectionInterface;
 
 /**
  * Class StickyRoundRobinSelector

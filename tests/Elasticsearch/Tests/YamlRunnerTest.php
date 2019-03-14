@@ -2,13 +2,13 @@
 
 namespace Elasticsearch\Tests;
 
-use Elasticsearch;
-use Elasticsearch\Common\Exceptions\BadRequest400Exception;
-use Elasticsearch\Common\Exceptions\Conflict409Exception;
-use Elasticsearch\Common\Exceptions\Forbidden403Exception;
-use Elasticsearch\Common\Exceptions\Missing404Exception;
-use Elasticsearch\Common\Exceptions\RequestTimeout408Exception;
-use Elasticsearch\Common\Exceptions\ServerErrorResponseException;
+use Enalquiler\Elasticsearch;
+use Enalquiler\Elasticsearch\Common\Exceptions\BadRequest400Exception;
+use Enalquiler\Elasticsearch\Common\Exceptions\Conflict409Exception;
+use Enalquiler\Elasticsearch\Common\Exceptions\Forbidden403Exception;
+use Enalquiler\Elasticsearch\Common\Exceptions\Missing404Exception;
+use Enalquiler\Elasticsearch\Common\Exceptions\RequestTimeout408Exception;
+use Enalquiler\Elasticsearch\Common\Exceptions\ServerErrorResponseException;
 use FilesystemIterator;
 use GuzzleHttp\Ring\Future\FutureArrayInterface;
 use RecursiveDirectoryIterator;
@@ -179,9 +179,9 @@ class YamlRunnerTest extends \PHPUnit_Framework_TestCase
     public static function provider()
     {
         // Dirty workaround for the path change in Core
-        $path = dirname(__FILE__).'/../../../util/elasticsearch/rest-api-spec/test/';
+        $path = __DIR__ .'/../../../util/elasticsearch/rest-api-spec/test/';
         if (file_exists($path) !== true) {
-            $path = dirname(__FILE__).'/../../../util/elasticsearch/rest-api-spec/src/main/resources/rest-api-spec/test';
+            $path = __DIR__ .'/../../../util/elasticsearch/rest-api-spec/src/main/resources/rest-api-spec/test';
         }
 
         $files = array();

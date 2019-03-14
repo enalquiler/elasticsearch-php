@@ -1,11 +1,11 @@
 <?php
 
-namespace Elasticsearch;
+namespace Enalquiler\Elasticsearch;
 
-use Elasticsearch\Common\Exceptions;
-use Elasticsearch\ConnectionPool\AbstractConnectionPool;
-use Elasticsearch\Connections\Connection;
-use Elasticsearch\Connections\ConnectionInterface;
+use Enalquiler\Elasticsearch\Common\Exceptions;
+use Enalquiler\Elasticsearch\ConnectionPool\AbstractConnectionPool;
+use Enalquiler\Elasticsearch\Connections\Connection;
+use Enalquiler\Elasticsearch\Connections\ConnectionInterface;
 use Psr\Log\LoggerInterface;
 
 /**

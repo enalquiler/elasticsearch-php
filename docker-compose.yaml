@@ -1,0 +1,18 @@
+version: "3.4"
+
+services:
+  elasticsearch:
+    image: elasticsearch:1.7-alpine
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    volumes:
+      - ./elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+  phpunit:
+    build: ./
+    command: php vendor/bin/phpunit
+    volumes:
+      - ./:/usr/src/myapp
+    environment:
+      TEST_BUILD_REF: origin/1.7
+      ES_TEST_HOST: http://elasticsearch:9200

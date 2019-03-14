@@ -1,0 +1,9 @@
+network.host: 0.0.0.0
+repositories.url.allowed_urls: ["http://*"]
+path.repo: ["/tmp"]
+gateway.type: none
+index.store.type: memory
+discovery.zen.ping.multicast.enabled: false
+node.bench: true
+script.disable_dynamic: false
+discovery.zen.ping_timeout: 1s

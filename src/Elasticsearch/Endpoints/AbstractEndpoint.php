@@ -1,9 +1,9 @@
 <?php
 
-namespace Elasticsearch\Endpoints;
+namespace Enalquiler\Elasticsearch\Endpoints;
 
-use Elasticsearch\Common\Exceptions\UnexpectedValueException;
-use Elasticsearch\Transport;
+use Enalquiler\Elasticsearch\Common\Exceptions\UnexpectedValueException;
+use Enalquiler\Elasticsearch\Transport;
 use Exception;
 use GuzzleHttp\Ring\Future\FutureArrayInterface;
 
@@ -36,7 +36,7 @@ abstract class AbstractEndpoint
     /** @var  array */
     protected $body = null;
 
-    /** @var \Elasticsearch\Transport */
+    /** @var \Enalquiler\Elasticsearch\\Transport */
     private $transport = null;
 
     /** @var array */
@@ -232,7 +232,7 @@ abstract class AbstractEndpoint
     /**
      * @param array $params
      *
-     * @throws \Elasticsearch\Common\Exceptions\UnexpectedValueException
+     * @throws \Enalquiler\Elasticsearch\\Common\Exceptions\UnexpectedValueException
      */
     private function checkUserParams($params)
     {

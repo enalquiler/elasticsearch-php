@@ -1,9 +1,9 @@
 <?php
 
-namespace Elasticsearch\Connections;
+namespace Enalquiler\Elasticsearch\Connections;
 
-use Elasticsearch\Serializers\SerializerInterface;
-use Elasticsearch\Transport;
+use Enalquiler\Elasticsearch\Serializers\SerializerInterface;
+use Enalquiler\Elasticsearch\Transport;
 use Psr\Log\LoggerInterface;
 
 /**
@@ -23,7 +23,7 @@ interface ConnectionInterface
      * @param $handler
      * @param array $hostDetails
      * @param array $connectionParams connection-specific parameters
-     * @param \Elasticsearch\Serializers\SerializerInterface $serializer
+     * @param \Enalquiler\Elasticsearch\\Serializers\SerializerInterface $serializer
      * @param \Psr\Log\LoggerInterface $log          Logger object
      * @param \Psr\Log\LoggerInterface $trace        Logger object
      */
@@ -71,7 +71,7 @@ interface ConnectionInterface
      * @param null $params
      * @param null $body
      * @param array $options
-     * @param \Elasticsearch\Transport $transport
+     * @param \Enalquiler\Elasticsearch\\Transport $transport
      * @return mixed
      */
     public function performRequest($method, $uri, $params = null, $body = null, $options = [], Transport $transport);

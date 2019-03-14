@@ -1,6 +1,6 @@
 <?php
 
-namespace Elasticsearch\Endpoints\Nodes;
+namespace Enalquiler\Elasticsearch\Endpoints\Nodes;
 
 /**
  * Class Info

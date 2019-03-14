@@ -1,6 +1,6 @@
 <?php
 
-namespace Elasticsearch\Common\Exceptions;
+namespace Enalquiler\Elasticsearch\Common\Exceptions;
 
 /**
  * AlreadyExpiredException, thrown when a document has already expired

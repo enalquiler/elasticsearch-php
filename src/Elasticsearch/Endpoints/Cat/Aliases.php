@@ -1,8 +1,8 @@
 <?php
 
-namespace Elasticsearch\Endpoints\Cat;
+namespace Enalquiler\Elasticsearch\Endpoints\Cat;
 
-use Elasticsearch\Endpoints\AbstractEndpoint;
+use Enalquiler\Elasticsearch\Endpoints\AbstractEndpoint;
 
 /**
  * Class Aliases

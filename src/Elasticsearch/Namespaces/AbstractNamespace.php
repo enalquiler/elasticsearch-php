@@ -1,8 +1,8 @@
 <?php
 
-namespace Elasticsearch\Namespaces;
+namespace Enalquiler\Elasticsearch\Namespaces;
 
-use Elasticsearch\Transport;
+use Enalquiler\Elasticsearch\Transport;
 
 /**
  * Class AbstractNamespace
@@ -15,7 +15,7 @@ use Elasticsearch\Transport;
  */
 abstract class AbstractNamespace
 {
-    /** @var \Elasticsearch\Transport */
+    /** @var \Enalquiler\Elasticsearch\\Transport */
     protected $transport;
 
     /** @var  callback */

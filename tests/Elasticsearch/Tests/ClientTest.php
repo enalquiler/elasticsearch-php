@@ -2,9 +2,9 @@
 
 namespace Elasticsearch\Tests;
 
-use Elasticsearch;
-use Elasticsearch\ClientBuilder;
-use Elasticsearch\Connections\Connection;
+use Enalquiler\Elasticsearch;
+use Enalquiler\Elasticsearch\ClientBuilder;
+use Enalquiler\Elasticsearch\Connections\Connection;
 use Mockery as m;
 
 /**
@@ -25,7 +25,7 @@ class ClientTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \Elasticsearch\Common\Exceptions\InvalidArgumentException
+     * @expectedException \Enalquiler\Elasticsearch\Common\Exceptions\InvalidArgumentException
      */
     public function testConstructorIllegalPort()
     {
@@ -61,7 +61,7 @@ class ClientTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \Elasticsearch\Common\Exceptions\RuntimeException
+     * @expectedException \Enalquiler\Elasticsearch\Common\Exceptions\RuntimeException
      */
     public function testFromConfigBadParam()
     {
@@ -245,7 +245,7 @@ class ClientTest extends \PHPUnit_Framework_TestCase
         } catch (Elasticsearch\Common\Exceptions\Curl\CouldNotConnectToHost $e) {
             // All good
             $previous = $e->getPrevious();
-            $this->assertInstanceOf('Elasticsearch\Common\Exceptions\MaxRetriesException', $previous);
+            $this->assertInstanceOf('Enalquiler\Elasticsearch\Common\Exceptions\MaxRetriesException', $previous);
         } catch (\Exception $e) {
             throw $e;
         }
@@ -262,7 +262,7 @@ class ClientTest extends \PHPUnit_Framework_TestCase
         } catch (Elasticsearch\Common\Exceptions\TransportException $e) {
             // All good
             $previous = $e->getPrevious();
-            $this->assertInstanceOf('Elasticsearch\Common\Exceptions\MaxRetriesException', $previous);
+            $this->assertInstanceOf('Enalquiler\Elasticsearch\Common\Exceptions\MaxRetriesException', $previous);
         } catch (\Exception $e) {
             throw $e;
         }

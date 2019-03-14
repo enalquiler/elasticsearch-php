@@ -1,11 +1,11 @@
 <?php
 
-namespace Elasticsearch\ConnectionPool;
+namespace Enalquiler\Elasticsearch\ConnectionPool;
 
-use Elasticsearch\Common\Exceptions\NoNodesAvailableException;
-use Elasticsearch\ConnectionPool\Selectors\SelectorInterface;
-use Elasticsearch\Connections\Connection;
-use Elasticsearch\Connections\ConnectionFactoryInterface;
+use Enalquiler\Elasticsearch\Common\Exceptions\NoNodesAvailableException;
+use Enalquiler\Elasticsearch\ConnectionPool\Selectors\SelectorInterface;
+use Enalquiler\Elasticsearch\Connections\Connection;
+use Enalquiler\Elasticsearch\Connections\ConnectionFactoryInterface;
 
 class StaticConnectionPool extends AbstractConnectionPool implements ConnectionPoolInterface
 {
@@ -32,7 +32,7 @@ class StaticConnectionPool extends AbstractConnectionPool implements ConnectionP
      * @param bool $force
      *
      * @return Connection
-     * @throws \Elasticsearch\Common\Exceptions\NoNodesAvailableException
+     * @throws \Enalquiler\Elasticsearch\\Common\Exceptions\NoNodesAvailableException
      */
     public function nextConnection($force = false)
     {

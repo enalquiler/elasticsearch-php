@@ -1,6 +1,6 @@
 <?php
 
-namespace Elasticsearch\Namespaces;
+namespace Enalquiler\Elasticsearch\Namespaces;
 
 /**
  * Class ClusterNamespace
@@ -38,7 +38,7 @@ class ClusterNamespace extends AbstractNamespace
         /** @var callback $endpointBuilder */
         $endpointBuilder = $this->endpoints;
 
-        /** @var \Elasticsearch\Endpoints\Cluster\Health $endpoint */
+        /** @var \Enalquiler\Elasticsearch\\Endpoints\Cluster\Health $endpoint */
         $endpoint = $endpointBuilder('Cluster\Health');
         $endpoint->setIndex($index);
         $endpoint->setParams($params);
@@ -68,7 +68,7 @@ class ClusterNamespace extends AbstractNamespace
         /** @var callback $endpointBuilder */
         $endpointBuilder = $this->endpoints;
 
-        /** @var \Elasticsearch\Endpoints\Cluster\Reroute $endpoint */
+        /** @var \Enalquiler\Elasticsearch\\Endpoints\Cluster\Reroute $endpoint */
         $endpoint = $endpointBuilder('Cluster\Reroute');
         $endpoint->setBody($body);
         $endpoint->setParams($params);
@@ -104,7 +104,7 @@ class ClusterNamespace extends AbstractNamespace
         /** @var callback $endpointBuilder */
         $endpointBuilder = $this->endpoints;
 
-        /** @var \Elasticsearch\Endpoints\Cluster\State $endpoint */
+        /** @var \Enalquiler\Elasticsearch\\Endpoints\Cluster\State $endpoint */
         $endpoint = $endpointBuilder('Cluster\State');
         $endpoint->setParams($params)
                  ->setIndex($index)
@@ -134,7 +134,7 @@ class ClusterNamespace extends AbstractNamespace
         /** @var callback $endpointBuilder */
         $endpointBuilder = $this->endpoints;
 
-        /** @var \Elasticsearch\Endpoints\Cluster\Stats $endpoint */
+        /** @var \Enalquiler\Elasticsearch\\Endpoints\Cluster\Stats $endpoint */
         $endpoint = $endpointBuilder('Cluster\Stats');
         $endpoint->setNodeID($nodeID)
                  ->setParams($params);
@@ -161,7 +161,7 @@ class ClusterNamespace extends AbstractNamespace
         /** @var callback $endpointBuilder */
         $endpointBuilder = $this->endpoints;
 
-        /** @var \Elasticsearch\Endpoints\Cluster\Settings\Put $endpoint */
+        /** @var \Enalquiler\Elasticsearch\\Endpoints\Cluster\Settings\Put $endpoint */
         $endpoint = $endpointBuilder('Cluster\Settings\Put');
         $endpoint->setBody($body);
         $endpoint->setParams($params);
@@ -184,7 +184,7 @@ class ClusterNamespace extends AbstractNamespace
         /** @var callback $endpointBuilder */
         $endpointBuilder = $this->endpoints;
 
-        /** @var \Elasticsearch\Endpoints\Cluster\Settings\Put $endpoint */
+        /** @var \Enalquiler\Elasticsearch\\Endpoints\Cluster\Settings\Put $endpoint */
         $endpoint = $endpointBuilder('Cluster\Settings\Get');
         $endpoint->setParams($params);
         $response = $endpoint->performRequest();
@@ -206,7 +206,7 @@ class ClusterNamespace extends AbstractNamespace
         /** @var callback $endpointBuilder */
         $endpointBuilder = $this->endpoints;
 
-        /** @var \Elasticsearch\Endpoints\Cluster\PendingTasks $endpoint */
+        /** @var \Enalquiler\Elasticsearch\\Endpoints\Cluster\PendingTasks $endpoint */
         $endpoint = $endpointBuilder('Cluster\PendingTasks');
         $endpoint->setParams($params);
         $response = $endpoint->performRequest();

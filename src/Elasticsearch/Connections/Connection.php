@@ -1,25 +1,25 @@
 <?php
 
-namespace Elasticsearch\Connections;
+namespace Enalquiler\Elasticsearch\Connections;
 
-use Elasticsearch\Common\Exceptions\AlreadyExpiredException;
-use Elasticsearch\Common\Exceptions\BadRequest400Exception;
-use Elasticsearch\Common\Exceptions\Conflict409Exception;
-use Elasticsearch\Common\Exceptions\Curl\CouldNotConnectToHost;
-use Elasticsearch\Common\Exceptions\Curl\CouldNotResolveHostException;
-use Elasticsearch\Common\Exceptions\Curl\OperationTimeoutException;
-use Elasticsearch\Common\Exceptions\Forbidden403Exception;
-use Elasticsearch\Common\Exceptions\MaxRetriesException;
-use Elasticsearch\Common\Exceptions\Missing404Exception;
-use Elasticsearch\Common\Exceptions\NoDocumentsToGetException;
-use Elasticsearch\Common\Exceptions\NoShardAvailableException;
-use Elasticsearch\Common\Exceptions\RequestTimeout408Exception;
-use Elasticsearch\Common\Exceptions\RoutingMissingException;
-use Elasticsearch\Common\Exceptions\ScriptLangNotSupportedException;
-use Elasticsearch\Common\Exceptions\ServerErrorResponseException;
-use Elasticsearch\Common\Exceptions\TransportException;
-use Elasticsearch\Serializers\SerializerInterface;
-use Elasticsearch\Transport;
+use Enalquiler\Elasticsearch\Common\Exceptions\AlreadyExpiredException;
+use Enalquiler\Elasticsearch\Common\Exceptions\BadRequest400Exception;
+use Enalquiler\Elasticsearch\Common\Exceptions\Conflict409Exception;
+use Enalquiler\Elasticsearch\Common\Exceptions\Curl\CouldNotConnectToHost;
+use Enalquiler\Elasticsearch\Common\Exceptions\Curl\CouldNotResolveHostException;
+use Enalquiler\Elasticsearch\Common\Exceptions\Curl\OperationTimeoutException;
+use Enalquiler\Elasticsearch\Common\Exceptions\Forbidden403Exception;
+use Enalquiler\Elasticsearch\Common\Exceptions\MaxRetriesException;
+use Enalquiler\Elasticsearch\Common\Exceptions\Missing404Exception;
+use Enalquiler\Elasticsearch\Common\Exceptions\NoDocumentsToGetException;
+use Enalquiler\Elasticsearch\Common\Exceptions\NoShardAvailableException;
+use Enalquiler\Elasticsearch\Common\Exceptions\RequestTimeout408Exception;
+use Enalquiler\Elasticsearch\Common\Exceptions\RoutingMissingException;
+use Enalquiler\Elasticsearch\Common\Exceptions\ScriptLangNotSupportedException;
+use Enalquiler\Elasticsearch\Common\Exceptions\ServerErrorResponseException;
+use Enalquiler\Elasticsearch\Common\Exceptions\TransportException;
+use Enalquiler\Elasticsearch\Serializers\SerializerInterface;
+use Enalquiler\Elasticsearch\Transport;
 use GuzzleHttp\Ring\Core;
 use GuzzleHttp\Ring\Exception\ConnectException;
 use GuzzleHttp\Ring\Exception\RingException;
@@ -92,7 +92,7 @@ class Connection implements ConnectionInterface
      * @param $handler
      * @param array $hostDetails
      * @param array $connectionParams Array of connection-specific parameters
-     * @param \Elasticsearch\Serializers\SerializerInterface $serializer
+     * @param \Enalquiler\Elasticsearch\\Serializers\SerializerInterface $serializer
      * @param \Psr\Log\LoggerInterface $log              Logger object
      * @param \Psr\Log\LoggerInterface $trace
      */
@@ -133,7 +133,7 @@ class Connection implements ConnectionInterface
      * @param null $params
      * @param null $body
      * @param array $options
-     * @param \Elasticsearch\Transport $transport
+     * @param \Enalquiler\Elasticsearch\\Transport $transport
      * @return mixed
      */
     public function performRequest($method, $uri, $params = null, $body = null, $options = [], Transport $transport = null)
@@ -497,7 +497,7 @@ class Connection implements ConnectionInterface
     /**
      * @param $request
      * @param $response
-     * @return \Elasticsearch\Common\Exceptions\Curl\CouldNotConnectToHost|\Elasticsearch\Common\Exceptions\Curl\CouldNotResolveHostException|\Elasticsearch\Common\Exceptions\Curl\OperationTimeoutException|\Elasticsearch\Common\Exceptions\MaxRetriesException
+     * @return \Enalquiler\Elasticsearch\\Common\Exceptions\Curl\CouldNotConnectToHost|\Elasticsearch\Common\Exceptions\Curl\CouldNotResolveHostException|\Elasticsearch\Common\Exceptions\Curl\OperationTimeoutException|\Elasticsearch\Common\Exceptions\MaxRetriesException
      */
     protected function getCurlRetryException($request, $response)
     {
@@ -550,7 +550,7 @@ class Connection implements ConnectionInterface
      * @param $request
      * @param $response
      * @param $ignore
-     * @throws \Elasticsearch\Common\Exceptions\AlreadyExpiredException|\Elasticsearch\Common\Exceptions\BadRequest400Exception|\Elasticsearch\Common\Exceptions\Conflict409Exception|\Elasticsearch\Common\Exceptions\Forbidden403Exception|\Elasticsearch\Common\Exceptions\Missing404Exception|\Elasticsearch\Common\Exceptions\ScriptLangNotSupportedException|null
+     * @throws \Enalquiler\Elasticsearch\\Common\Exceptions\AlreadyExpiredException|\Elasticsearch\Common\Exceptions\BadRequest400Exception|\Elasticsearch\Common\Exceptions\Conflict409Exception|\Elasticsearch\Common\Exceptions\Forbidden403Exception|\Elasticsearch\Common\Exceptions\Missing404Exception|\Elasticsearch\Common\Exceptions\ScriptLangNotSupportedException|null
      */
     private function process4xxError($request, $response, $ignore)
     {
@@ -596,7 +596,7 @@ class Connection implements ConnectionInterface
      * @param $request
      * @param $response
      * @param $ignore
-     * @throws \Elasticsearch\Common\Exceptions\NoDocumentsToGetException|\Elasticsearch\Common\Exceptions\NoShardAvailableException|\Elasticsearch\Common\Exceptions\RoutingMissingException|\Elasticsearch\Common\Exceptions\ServerErrorResponseException
+     * @throws \Enalquiler\Elasticsearch\\Common\Exceptions\NoDocumentsToGetException|\Elasticsearch\Common\Exceptions\NoShardAvailableException|\Elasticsearch\Common\Exceptions\RoutingMissingException|\Elasticsearch\Common\Exceptions\ServerErrorResponseException
      */
     private function process5xxError($request, $response, $ignore)
     {
@@ -637,11 +637,11 @@ class Connection implements ConnectionInterface
     }
 
     private function tryDeserialize400Error($response) {
-        return $this->tryDeserializeError($response, 'Elasticsearch\Common\Exceptions\BadRequest400Exception');
+        return $this->tryDeserializeError($response, 'Enalquiler\Elasticsearch\Common\Exceptions\BadRequest400Exception');
     }
 
     private function tryDeserialize500Error($response) {
-        return $this->tryDeserializeError($response, 'Elasticsearch\Common\Exceptions\ServerErrorResponseException');
+        return $this->tryDeserializeError($response, 'Enalquiler\Elasticsearch\Common\Exceptions\ServerErrorResponseException');
     }
 
     private function tryDeserializeError($response, $errorClass) {
